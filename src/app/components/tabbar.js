@@ -8,6 +8,11 @@ class TabBarExample extends Component {
             selectedTab: 'redTab',
         };
     }
+    renderContent(pageText){
+        return(
+            <h2>Clicked “{pageText}” tab， show “{pageText}” information</h2>
+        );
+    }
     render() {
         return (
             <div style={{ position: 'fixed', height: '100%', width: '100%', bottom: 0 }}>
@@ -33,8 +38,8 @@ class TabBarExample extends Component {
                         // }}
                         // />
                         // }
-                        icon={<i className="fa fa-home"></i>} 
-                        selectedIcon={<Icon type="check-circle-o" />} 
+                        icon={<i className="fa fa-home fa-lg"></i>} 
+                        selectedIcon={<i className="fa fa-home fa-lg"></i>} 
                         selected={this.state.selectedTab === 'blueTab'}
                         badge={1}
                         onPress={() => {
@@ -44,6 +49,7 @@ class TabBarExample extends Component {
                         }}
                         data-seed="logId"
                     >
+                    {this.renderContent('Life')}
                     </TabBar.Item>
                     <TabBar.Item
                         // icon={
@@ -75,6 +81,7 @@ class TabBarExample extends Component {
                         }}
                         data-seed="logId1"
                     >
+                    {this.renderContent('Koubei')}
                     </TabBar.Item>
                     <TabBar.Item
                         // icon={
@@ -106,12 +113,13 @@ class TabBarExample extends Component {
                             });
                         }}
                     >
+                    {this.renderContent('Friend')}
                     </TabBar.Item>
                     <TabBar.Item
                         // icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
                         // selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
-                        icon={<Icon type="check-circle" />} 
-                        selectedIcon={<Icon type="check-circle-o" />} 
+                        icon={<i className="fa fa-user fa-lg"></i>} 
+                        selectedIcon={<i className="fa fa-user fa-lg"></i>} 
                         title="My"
                         key="my"
                         selected={this.state.selectedTab === 'yellowTab'}
@@ -121,6 +129,7 @@ class TabBarExample extends Component {
                             });
                         }}
                     >
+                    {this.renderContent('My')}
                     </TabBar.Item>
                 </TabBar>
             </div>
