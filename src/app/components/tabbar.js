@@ -22,8 +22,8 @@ class TabBarExample extends Component {
                     barTintColor="white"
                 >
                     <TabBar.Item
-                        title="Life"
-                        key="Life"
+                        title="首页"
+                        key="home"
                         // icon={<div style={{
                         //     width: '22px',
                         //     height: '22px',
@@ -49,7 +49,7 @@ class TabBarExample extends Component {
                         }}
                         data-seed="logId"
                     >
-                    {this.renderContent('Life')}
+                    {this.renderContent('首页')}
                     </TabBar.Item>
                     <TabBar.Item
                         // icon={
@@ -120,7 +120,7 @@ class TabBarExample extends Component {
                         // selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
                         icon={<i className="fa fa-user fa-lg"></i>} 
                         selectedIcon={<i className="fa fa-user fa-lg"></i>} 
-                        title="My"
+                        title="我的"
                         key="my"
                         selected={this.state.selectedTab === 'yellowTab'}
                         onPress={() => {
@@ -129,7 +129,7 @@ class TabBarExample extends Component {
                             });
                         }}
                     >
-                    {this.renderContent('My')}
+                    {this.renderContent('我的')}
                     </TabBar.Item>
                 </TabBar>
             </div>
